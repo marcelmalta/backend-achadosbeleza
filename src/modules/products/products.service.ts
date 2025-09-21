@@ -14,7 +14,7 @@ export class ProductsService {
     return this.repo.find();
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return this.repo.findOneBy({ id });
   }
 
@@ -22,11 +22,11 @@ export class ProductsService {
     return this.repo.save(product);
   }
 
-  update(id: number, product: Partial<Product>) {
+  update(id: string, product: Partial<Product>) {
     return this.repo.update(id, product);
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return this.repo.delete(id);
   }
 }

@@ -13,7 +13,7 @@ export class ProductsController {
 
   @Get(":id")
   findOne(@Param("id") id: string) {
-    return this.productsService.findOne(Number(id));
+    return this.productsService.findOne(id);
   }
 
   @Post()
@@ -23,11 +23,11 @@ export class ProductsController {
 
   @Put(":id")
   update(@Param("id") id: string, @Body() product: Partial<Product>) {
-    return this.productsService.update(Number(id), product);
+    return this.productsService.update(id, product);
   }
 
   @Delete(":id")
   remove(@Param("id") id: string) {
-    return this.productsService.remove(Number(id));
+    return this.productsService.remove(id);
   }
 }
